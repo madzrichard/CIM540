@@ -10,8 +10,8 @@ Below is how to do a link:
 Below is image:
 ![this is a messgae](image link)
 
-*This is list one
- *this is an indentation 
+* This is list one
+ * this is an indentation 
  
  `this should be code`
  
