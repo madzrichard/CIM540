@@ -9,31 +9,36 @@ var eye2Offset = 350;
 var pupilOffset = 10;
 
 var backgroundColor = 'yellow';
-
 var ranNum = 0;
-
 var mapX = 0;
+
+
 
 function setup() {
     
-createCanvas(500,400);
-background(130,27,60);
-console.log("width " + width + " " + "height" + height);
-noStroke(); //to get rid of all black lines from drawing - but removes lines as well 
+    createCanvas(500,400);
+    background(130,27,60);
+    console.log("width " + width + " " + "height" + height);
+    noStroke(); //to get rid of all black lines from drawing - but removes lines as well 
 
 
-console.log(ranNum);
-    
-ranNum = random(256); //generating number up to 256 but not including it 
-}
+    console.log(ranNum);
+
+    ranNum = random(256); //generating number up to 256 but not including it 
+    }
+
+
 
 
 function draw() {
     
     mapX = map(mouseX,0,500,-10,10);
+                //what is it maping, initial range-mapping from, what you are mapping to-what the initial range is being condensed to. 
+                //mapX is what you put into what you want to be mapped ->command
     
     background(backgroundColor); //creates a cursor instead of drawing with the dot 
-    ellipse(mouseX,mouseY,10,10);
+    
+    ellipse(mouseX,mouseY,10,10); //mouse cursor 
     
     // x, y, width, height
     //eye1
@@ -77,10 +82,14 @@ function draw() {
 }
 
 
+
+
 function mousePressed(){
     backgroundColor = 'pink'; //changes the value of the variable backgroundColor 
     
 }
+
+
 
 function mouseReleased(){
     backgroundColor = 'grey';

@@ -70,10 +70,10 @@ function draw() {
 
 
 function mousePressed(){
-    backgroundColor = 'orange'; 
-    
+    backgroundColor = "rgb(255,69,0)";
+
     }
 
 function mouseReleased(){
-    backgroundColor = 'green';
+    backgroundColor = "rgb(35,230,100)";
     }
