@@ -45,9 +45,9 @@ function draw() {
 	
 	
   if (mouseY > height/2){
-        background(200,262,15);
+        background(40,200,40);
     }else if(mouseY < height/2){
-        background(123,45,222);
+        background(200,0,140);
     }else{
 		baground(0,0,0);
 	}	
