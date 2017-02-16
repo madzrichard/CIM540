@@ -10,7 +10,7 @@ function setup() {
 
 function draw() {
 	
-	counter = height/2;
+//	counter = height/2;
 	
 	if (counter <= height/2) {
 		ballDir = true;
@@ -32,6 +32,14 @@ function draw() {
   
 	if (ballDir == false){
 		counter = counter + 1;
+	}
+	
+	if (counter > 400){
+		counter = 400;
+	}
+	
+	if (counter < 0){
+		counter = 0;
 	}
 	
 	
