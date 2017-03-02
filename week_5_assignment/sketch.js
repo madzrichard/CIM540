@@ -31,7 +31,6 @@ function draw() {
   for (var keys in responses) {
 
     fill("white");
-    textAlign(CENTER);
     text(keys, choiceCounter * textHeight, height / 2, textHeight, textHeight);
     text(choiceCounter + 1, choiceCounter * textHeight, height / 2 + 20, textHeight, textHeight);
     text(responses[keys], choiceCounter * textHeight, height / 2 + 40, textHeight, textHeight);
