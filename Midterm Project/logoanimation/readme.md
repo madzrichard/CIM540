@@ -32,3 +32,5 @@ Pseudo code:
 7. When the names are in their final position mouse pressed and key pressed functions are now accessible. 
 8. When someone presses the mouse the different color logos will cycle through. 
 9. When someone presses any key it will set all of the variables back to their original states/values and therefore cause the animation to run again. 
+
+![alt text](pngs/ScreenShot.jpg "Screenshot of project")
