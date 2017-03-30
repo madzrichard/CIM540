@@ -24,6 +24,7 @@ function preload() {
     waveFrameArray[waveFrames] = loadImage(waveFrameString);
   }
 
+}
 
 
 function setup() {
@@ -65,6 +66,7 @@ function draw() {
 	  	currentFrame++; // Next frame
 		pMillis = millis();
 		}
+		
 		if (currentFrame == waveFrameArray.length) {
     	currentFrame = 4;
   		}
@@ -72,4 +74,4 @@ function draw() {
 		image(whiteMask, -.7, 0, 400, 400);
 	}
 
-}}
+}

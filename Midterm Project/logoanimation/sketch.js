@@ -20,6 +20,22 @@ var sunUp = false;
 var nameAnimation = false;
 var interactStart = false;
 
+//Millis stuff
+var waveFrameAmounts = 21;
+var waveFrameArray = [];
+var currentFrame = 0;
+
+var interval = 90;
+var pMillis = 0
+
+
+function preload() {
+  for (var waveFrames = 0; waveFrames < waveFrameAmounts; waveFrames++) {
+    var waveFrameString = "pngs/waves/waves" + waveFrames + ".png";
+    waveFrameArray[waveFrames] = loadImage(waveFrameString);
+  }
+
+}
 
 
 function setup() {
@@ -72,10 +88,21 @@ function draw() {
 
 
 	if (showLogo == true) {
-		image(waves, -1, 0, 400, 400);
+		image(waveFrameArray[currentFrame], -1, 0, 400, 400);
+	
+		if(millis()-pMillis >= interval){
+	  	currentFrame++; // Next frame
+		pMillis = millis();
+		}
+		
+		if (currentFrame == waveFrameArray.length) {
+    	currentFrame = 20;
+		sunUp = true;
+  		}
+	
 		image(whiteMask, -.7, 0, 400, 400);
 		//fadeInWaveCounter == imageArray.length
-		sunUp = true;
+		
 	}
 	
 	if(nameAnimation == true){
@@ -126,6 +153,8 @@ function keyPressed(){
 		counterRichard = -150
 		logoIndex = 0;
 
+		currentFrame = 0;
+		pMillis = 0
 	}
 }
 
